@@ -1,0 +1,33 @@
+<html>  
+<head>  
+<title> Password Matching Validation </title>  
+</head>  
+
+  
+<body>   
+    <form>
+        Password:<br>
+        <input type="password" id="password" placeholder="Password">
+        <br>
+        confirm Password:<br>
+        <input type="password" id="confirmPassword" placeholder="Confirm password">
+        <br>
+        <input type="button" href="#" onclick="ansValidation(event)" value="Sign Up">
+    </form>
+     
+
+<script>  
+function ansValidation(ev) {
+    ev.preventDefault
+    var nameValue = "test";
+    var passValue = document.getElementById("password").value
+    var confpassValue = document.getElementById("confirmPassword").value
+    if(typeof nameValue !== "string"){
+        window.alert("Please re-enter your name")
+    }else if(passValue !== confpassValue) {
+       window.alert("Passwords do not match!")
+    }
+}
+</script>  
+</body>  
+</html>  
